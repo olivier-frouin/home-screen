@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="timed_data" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tchok.weather.data.forecast.TimedDataController">
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="_iconLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" text="icon" />
+            <Label fx:id="_tempLabelDay" alignment="CENTER" maxHeight="1.7976931348623157E308" text="day" />
+         </children>
+      </HBox>
+   </left>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="_dateLabel" text="date" />
+            <Label fx:id="_symbolName" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="symbol name" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="_tempLabelMorning" text="morning" />
+                  <Label fx:id="_tempLabelEvening" text="evening" />
+                  <Label fx:id="_tempLabelNight" text="night" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="_windNameLabel" text="wind name" />
+                  <Label fx:id="_windDetailsLabel" text="wind details" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Label fx:id="_pressureValueLabel" text="pressure" />
+                  <Label fx:id="_humidityLabel" text="humidity" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

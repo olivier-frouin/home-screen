@@ -1,0 +1,20 @@
+Try setterm -blank $minutes (or pass 0 to disable); -powersave option may also be related. setterm has a plenty of other useful options, too.
+
+If you want to set these attributes on system startup, consider writing an initscript. This is just a script placed in /etc/init.d directory. Let it be called setterm:
+
+#!/bin/sh
+[ "$1" == "start" ] || exit 0 # only initialize everything when called as /etc/init.d/setterm start
+for term in /dev/tty[0-9]*; do # select all ttyNN, but skip ttyS*
+    setterm -blank 0 >$term <$term
+    setterm -powersave off >$term <$term
+done
+
+Then make it executable:
+
+# chmod +x /etc/init.d/setterm
+
+And finally, create the /etc/rcX.d symlinks (the Debian way):
+
+# update-rc.d setterm defaults
+
+(If you'll get tired of that behavior, do # update-rc.d -f setterm remove. Note that -f must be the first argument).

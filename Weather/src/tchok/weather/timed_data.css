@@ -1,0 +1,20 @@
+.root {
+	-fx-background: black;
+}
+
+.root .timed_data {
+	-fx-font-size: 16px;
+	-fx-padding: 0.5em 0.5em 1em 0.5em;
+}
+
+#_dateLabel,
+#_tempLabelDay,
+#_symbolName {
+	-fx-font-weight: bold;
+	-fx-font-size: 1.5em;
+}
+
+#_tempLabelDay {
+	-fx-padding: 0px .2em 0px 1em;
+}
+
